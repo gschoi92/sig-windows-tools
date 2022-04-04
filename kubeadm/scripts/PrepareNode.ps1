@@ -24,7 +24,7 @@ Param(
     [string] $KubernetesVersion,
     [parameter(HelpMessage="Container runtime that Kubernets will use")]
     [ValidateSet("containerD", "Docker")]
-    [string] $ContainerRuntime = "Docker"
+    [string] $ContainerRuntime = "containerD"
 )
 $ErrorActionPreference = 'Stop'
 
