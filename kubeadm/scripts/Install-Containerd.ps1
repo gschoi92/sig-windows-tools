@@ -23,7 +23,7 @@ PS> .\Install-Conatinerd.ps1
 
 Param(
     [parameter(HelpMessage = "ContainerD version to use")]
-    [string] $ContainerDVersion = "1.4.1",
+    [string] $ContainerDVersion = "1.5.8",
     [parameter(HelpMessage = "Name of network adapter to use when configuring basic nat network")]
     [string] $netAdapterName = "Ethernet"
 )
@@ -83,9 +83,7 @@ function CalculateSubNet {
 }
 
 $requiredWindowsFeatures = @(
-    "Containers",
-    "Hyper-V",
-    "Hyper-V-PowerShell")
+    "Containers")
 
 function ValidateWindowsFeatures {
     $allFeaturesInstalled = $true
